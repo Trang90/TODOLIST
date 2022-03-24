@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'media-queries';
+
+.header {
+  width: 100%;
+  background: $darkCharcoal;
+  @extend %flex-column;
+
+  &__head {
+    margin: 30px 0;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: $nugget;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+
+    @include tablet {
+      font-size: 30px;
+      margin: 10px 0;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    @include mobileSmall {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+  }
+
+  &__today {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    color: $whiteSmoke;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    padding-left: 10px;
+    flex: 80%;
+
+    @include tablet {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+    @include mobile {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    @include mobileSmall {
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+  }
+}

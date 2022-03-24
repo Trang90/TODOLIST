@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontello.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <!-- Header section -->
+      <div class="header">
+        <h1 class="header__head">To Do List</h1>
+        <div class="header__today" id="date"></div>
+      </div>
+      <!-- Content section -->
+      <div class="content">
+        <div class="content__addTask">
+            <input type="text" class="content__addTask--col1 item"
+              id="input_beschreibung"
+              placeholder="Beschreibung"
+            />
+
+            <input
+              type="text"
+              class="content__addTask--col item"
+              id="input_datum"
+              placeholder="Fälligkeitsdatum (TT.MM.JJJJ)"
+            />
+          
+            <button class="content__addTask--col btn" id="add">Hinzufügen</button>
+
+            <button class="content__addTask--col btn" id="clear">Einträge löschen</button>
+
+        </div>
+
+        <div class="content__toDoList"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+

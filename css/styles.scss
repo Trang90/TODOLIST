@@ -1,0 +1,196 @@
+@import 'colors';
+@import 'media-queries';
+@import 'header';
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, san-serif;
+  font-size: 14px;
+  color: $darkCharcoal;
+  background: white;
+}
+
+a {
+  color: $darkCharcoal;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  @extend %flex-column;
+}
+
+.content {
+  @extend %flex-column;
+
+  &__addTask {
+    width: 100%;
+    min-height: 178px;
+    border: 1px solid $lightGray;
+    border-top: 1px solid $white;
+    box-shadow: 0 8px 6px -6px $lightGray;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--col1 {
+      flex: 54%;
+      float: left;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 30px;
+    }
+
+    &--col {
+      flex: 33.3333%;
+      float: left;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 30px;
+
+      @include mobile {
+        flex: 100%;
+        float: left;
+        margin-top: 10px;
+      }
+      @include mobileSmall {
+        flex: 100%;
+        float: left;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__toDoList {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($black, 0.1);
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+    &--col6 {
+      flex: 15%;
+      float: left;
+      padding: 15px;
+      font-size: 20px;
+      margin: 5px;
+      background-color: $sweetLucidDreams;
+      border-radius: 30px;
+      border-width: 2px;
+
+      &.lineThrough {
+        text-decoration: line-through;
+        color: $white;
+        background-color: $limeade;
+      }
+
+      i.co:hover {
+        cursor: pointer;
+      }
+
+      .icon-circle-empty {
+        color: $limeade;
+      }
+
+      .icon-trash-empty {
+        float: right;
+
+        &:hover {
+          color: $retroBerry;
+          cursor: pointer;
+        }
+      }
+
+      @include tablet {
+        flex: 25%;
+        float: left;
+        padding: 5px;
+        font-size: 15px;
+        margin: 5px;
+      }
+
+      @include mobile {
+        flex: 100%;
+        float: left;
+        padding: 5px;
+        font-size: 10px;
+        margin: 5px;
+      }
+
+      @include mobileSmall {
+        flex: 100%;
+        float: left;
+        padding: 5px;
+        font-size: 10px;
+        margin: 5px;
+      }
+    }
+  }
+}
+.item {
+  display: inline-block;
+  height: 40px;
+  color: $darkCharcoal;
+  font-style: italic;
+  padding-left: 10px;
+  border: 1px solid $lightGray;
+  font-size: 20px;
+
+  @include tablet {
+    font-size: 13px;
+  }
+
+  @include mobile {
+    font-size: 10px;
+    margin: 5px;
+  }
+
+  @include mobileSmall {
+    font-size: 10px;
+    margin: 5px;
+  }
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  background-color: $mediumDarkRed;
+  text-align: center;
+  color: $white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0;
+  display: inline-block;
+  font-size: 20px;
+
+  @include mobile {
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  @include mobileSmall {
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
